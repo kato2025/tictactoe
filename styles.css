@@ -36,6 +36,7 @@ body {      /* body styles */
     background-color: var(--blue-colour--);
 }
 .headerImage {     /* Header image styles */    
+    margin-left: 20px;
     width: 120px;
     height: auto;
 }
@@ -92,6 +93,9 @@ body {      /* body styles */
     font-size: 1.5rem;
     font-weight: bolder;
 }
+.scores {
+    margin-left: -20px;
+}
 #inputForm {    /* Input players form styles */
     align-self: center;
     border-top: none;
@@ -108,8 +112,9 @@ body {      /* body styles */
 }
 #player1Name,
 #player2Name {
+    margin-left: 5px;
     padding-left: 10px;
-    width: 180px;
+    width: 190px;
     height: 30px;
     font-family: var(--gamer-Font--);
     color: var(--blue-colour--);
@@ -131,7 +136,6 @@ body {      /* body styles */
 }
 #player1Score,
 #player2Score {
-    padding-left: 35px;
     font-family: "UnifrakturCook", cursive;
     font-size: 45px;
     color:var(--yellow-colour--);
@@ -140,7 +144,7 @@ body {      /* body styles */
     margin-top: -9px;
 }
 #player2Score {
-    margin-top: -20px;
+    margin-top: -18px;
 }
 #result {       /* Game result styles */
     margin-left: 90px;
