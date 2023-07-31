@@ -24,36 +24,44 @@ body {      /* body styles */
 } 
 /* Header styles */
 .header {       /* Main header styles */
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid  var(--red-colour--);
-    background-color:  var(--blue-colour--);
+    align-self: center;
+    align-items: center;
+    display: flex;
+    margin-top: 3px;
+    width: 470px;
     color: #fff;
+    border: 1px solid  var(--red-colour--);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: var(--blue-colour--);
 }
 .headerImage {     /* Header image styles */    
-    width: 200px;
+    width: 120px;
     height: auto;
 }
 .mainHeading {      /* Main heading styles */
-    margin-top: 20px;
+    margin: auto;
     font-family: 'Moo Lah Lah', cursive;
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: var(--yellow-colour--);
 }
 /* Game choice styles */
 .gamerChoice {
     display: flex;
     justify-content: center;
+    align-self: center;
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 0px;
+    width: 470px;
+    height: auto;
     font-weight: bolder;
     color:  #1c6aca;
+    border-left: 1px solid  var(--red-colour--);
+    border-right: 1px solid  var(--red-colour--);
 }
 #playWithHuman,
 #playWithAI {       /* Choose players styles */
+    margin-top: 7px;
     width: 30px;
     height: 30px;
     border-style: solid;
@@ -62,12 +70,9 @@ body {      /* body styles */
 }
 .playHuman,
 .playAI {    /* Choose players text styles */
+    margin-left: -12px;
     display: block;
-    margin-bottom: 0px;
     font-size: 1.5rem;
-}
-.playAI {
-    margin-bottom: 20px;
 }
 /* Input players, score and results styles */
 .playersScoresAndResults {
@@ -77,22 +82,21 @@ body {      /* body styles */
     margin-bottom: 5px;
     width: 470px;
     border: 1px solid  var(--red-colour--);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
     background-color:  var(--blue-colour--);
     color: var(--yellow-colour--);
 }
-.gamePlayers,
-.score {    /* Game players and score heading styles */
-    margin-top: 20px;
-}
 .players,
 .scores {   /* Players and score styles */
-    margin-bottom: 5px;
     font-size: 1.5rem;
     font-weight: bolder;
 }
 #inputForm {    /* Input players form styles */
     align-self: center;
     border-top: none;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
     background-color: var(--blue-colour--);
     color: var(--yellow-colour--);
 }
@@ -151,7 +155,7 @@ body {      /* body styles */
     justify-content: center;
     align-items: center;
     gap: 20px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 10px;
 }
 #startButton,
