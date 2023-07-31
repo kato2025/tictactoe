@@ -56,19 +56,44 @@ const displayController = (() => {
       cells[index].textContent = symbol;
     });
   };
+  // Creare function to play sound during game play
+  function playSound(player, win, tie) {
+    let soundId;
+    if (tie) {
+      soundId = 'tieSound';
+    } else if (win) {
+      soundId = 'winSound';
+    } else {
+      soundId = player === player1 ? 'player1Sound' : 'player2Sound';
+    }
+    const sound = document.getElementById(soundId);
+    // Check if the sound is already playing and if so, pause and reset it
+    if (!sound.paused) {
+      sound.pause();
+      sound.currentTime = 0;
+    }
+    // Play the sound
+    sound.play().catch((error) => {
+      console.error('Error playing sound:', error);
+    });
+  } 
   // Handle click event on the gameboard
   const handleClick = (event) => {
     const cellIndex = event.target.dataset.index;
     if (!gameActive || !Gameboard.updateCell(cellIndex, currentPlayer.symbol)) return;
     displayBoard(Gameboard.getBoard());
+      // Play the drum sound
+    playSound(currentPlayer, false, false); // Play sound for player's click
     if (checkWin(currentPlayer.symbol)) {
       resultElement.textContent = `${currentPlayer.name} wins! 🦋`;
       currentPlayer.score++;
       updateScores();
       gameActive = false;
+      playSound(currentPlayer, true, false); // Play the winning sound
     } else if (checkTie()) {
       resultElement.textContent = "It's a tie! 🦋 🦋";
       gameActive = false;
+      playSound(currentPlayer, false, true);
     } else {
       if (playWithHuman) {
         currentPlayer = currentPlayer === player1 ? player2 : player1;
