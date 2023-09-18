@@ -222,3 +222,18 @@ margin-left: 3px;
     border-bottom: 10px solid var(--blue-colour--);
     cursor: pointer;
 }
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-top: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #FFF;
+    background-color: var(--blue-colour--);
+}
